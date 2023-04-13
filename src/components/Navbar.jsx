@@ -1,10 +1,12 @@
-import React from 'react';
+import React, { useState } from 'react';
 import styled from 'styled-components';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faMagnifyingGlass } from '@fortawesome/free-solid-svg-icons'
+import { faMagnifyingGlass, faCartShopping } from '@fortawesome/free-solid-svg-icons'
 
 const Container = styled.div`
     height: 60px;
+    padding-bottom: 75px;
+    border-bottom: 3px solid darkgray;
 `;
 
 const Wrapper = styled.div`
@@ -30,34 +32,56 @@ const Search = styled.div`
     padding: 5px;
 `;
 
-const Input = styled.div`
+const Input = styled.input`
+    border: none;
 `
-
-
 
 const Center = styled.div`
     flex: 1;
+    text-align: center;
 `;
 
-
+const Logo = styled.div`
+    font-weight: bold;
+    font-size: 36px;
+`
 
 const Right = styled.div`
     flex: 1;
+    text-align: right;
+    padding-right: 25px;
 `;
 
+const Cart = styled.div`
+    cursor: pointer;
+`
+
 const Navbar = () => {
+    const [count, setCount] = useState(0);
+
   return (
     <Container>
         <Wrapper>
             <Left>
                 <Language>EN</Language>
                 <Search>
-                    input
+                    <Input/>
                     <FontAwesomeIcon icon={faMagnifyingGlass} />
                 </Search>
             </Left>
-            <Center>Center</Center>
-            <Right>Right</Right>
+            <Center>
+                <Logo>.Noir</Logo>
+            </Center>
+            <Right>
+            <Cart>
+                <button type="button" class="btn btn-light position-relative" onClick={() => setCount(count + 1)}>
+                    <FontAwesomeIcon icon={faCartShopping} size="2xl"/>
+                    <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
+                        {count}
+                    </span>
+                </button>
+            </Cart>
+            </Right>
         </Wrapper>
     </Container>
   )
