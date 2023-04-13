@@ -3,10 +3,60 @@ import styled from 'styled-components';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faMagnifyingGlass, faCartShopping } from '@fortawesome/free-solid-svg-icons'
 
+const Navbar = () => {
+    const [count, setCount] = useState(0);
+    const [searchTerm, setSearchTerm] = useState("");
+
+    const submitSearch = () => {
+        console.log(searchTerm)
+        setSearchTerm("")
+    }
+
+  return (
+    <Container>
+        <Wrapper>
+            <Left>
+                <Language>EN</Language>
+                <Search>
+                    <Input 
+                        type="text"
+                        className="search"
+                        value={searchTerm}
+                        onChange={(e) => setSearchTerm(e.target.value)} 
+                    />
+                    <FontAwesomeIcon 
+                        icon={faMagnifyingGlass}
+                        value="Submit" 
+                        onClick={submitSearch}
+                        style={{paddingLeft: "10px"}}
+                    />
+                </Search>
+            </Left>
+            <Center>
+                <Logo>.Noir</Logo>
+            </Center>
+            <Right>
+            <Cart>
+                <button type="button" className="btn btn-light position-relative" onClick={() => setCount(count + 1)}>
+                    <FontAwesomeIcon icon={faCartShopping} size="2xl"/>
+                    <span className="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
+                        {count}
+                    </span>
+                </button>
+            </Cart>
+            </Right>
+        </Wrapper>
+    </Container>
+  )
+}
+
+export default Navbar
+
 const Container = styled.div`
     height: 60px;
     padding-bottom: 75px;
     border-bottom: 3px solid darkgray;
+    border-top: 3px solid darkgray;
 `;
 
 const Wrapper = styled.div`
@@ -24,6 +74,15 @@ const Left = styled.div`
 const Language = styled.div`
     cursor: pointer;
 `;
+
+const Input = styled.input`
+    border: none;
+    &:focus {
+        outline: none !important;
+        box-shadow: 0 0 10px lightgray;
+    }
+`;
+
 const Search = styled.div`
     border: .5px solid lightgray;
     display: flex;
@@ -31,10 +90,6 @@ const Search = styled.div`
     margin-left: 25px;
     padding: 5px;
 `;
-
-const Input = styled.input`
-    border: none;
-`
 
 const Center = styled.div`
     flex: 1;
@@ -55,36 +110,3 @@ const Right = styled.div`
 const Cart = styled.div`
     cursor: pointer;
 `
-
-const Navbar = () => {
-    const [count, setCount] = useState(0);
-
-  return (
-    <Container>
-        <Wrapper>
-            <Left>
-                <Language>EN</Language>
-                <Search>
-                    <Input/>
-                    <FontAwesomeIcon icon={faMagnifyingGlass} />
-                </Search>
-            </Left>
-            <Center>
-                <Logo>.Noir</Logo>
-            </Center>
-            <Right>
-            <Cart>
-                <button type="button" class="btn btn-light position-relative" onClick={() => setCount(count + 1)}>
-                    <FontAwesomeIcon icon={faCartShopping} size="2xl"/>
-                    <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
-                        {count}
-                    </span>
-                </button>
-            </Cart>
-            </Right>
-        </Wrapper>
-    </Container>
-  )
-}
-
-export default Navbar
