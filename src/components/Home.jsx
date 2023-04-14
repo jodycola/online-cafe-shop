@@ -3,6 +3,7 @@ import Announcements from './Announcements';
 import Navbar from "./Navbar";
 import Slider from './Slider';
 import Location from './Location';
+import Product from './Product';
 
 const Home = () => {
   return (
@@ -11,6 +12,7 @@ const Home = () => {
         <Navbar/>
         <Slider/>
         <Location/>
+        <Product/>
     </div>
   )
 }

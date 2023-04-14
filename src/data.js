@@ -13,7 +13,7 @@ export const sliderItems = [
     }
 ]
 
-export const locations = [
+export const locationsItems = [
     {
         id: 1,
         img: "https://s.hdnux.com/photos/01/30/45/23/23221451/10/1200x0.jpg",
@@ -35,4 +35,61 @@ export const locations = [
         city: "Washington D.C."
     }
 
+]
+
+export const menuItems = [
+    {
+        id: 1,
+        img: "https://www.webfx.com/wp-content/uploads/2021/10/generic-image-placeholder.png",
+        price: 8.99,
+        name: "test"
+    },
+    {
+        id: 2,
+        img: "https://www.webfx.com/wp-content/uploads/2021/10/generic-image-placeholder.png",
+        price: 8.99,
+        name: "test"
+    },
+    {
+        id: 3,
+        img: "https://www.webfx.com/wp-content/uploads/2021/10/generic-image-placeholder.png",
+        price: 8.99,
+        name: "test"
+    },
+    {
+        id: 4,
+        img: "https://www.webfx.com/wp-content/uploads/2021/10/generic-image-placeholder.png",
+        price: 8.99,
+        name: "test"
+    },
+    {
+        id: 5,
+        img: "https://www.webfx.com/wp-content/uploads/2021/10/generic-image-placeholder.png",
+        price: 8.99,
+        name: "test"
+    },
+    {
+        id: 6,
+        img: "https://www.webfx.com/wp-content/uploads/2021/10/generic-image-placeholder.png",
+        price: 8.99,
+        name: "test"
+    },
+    {
+        id: 7,
+        img: "https://www.webfx.com/wp-content/uploads/2021/10/generic-image-placeholder.png",
+        price: 8.99,
+        name: "test"
+    },
+    {
+        id: 8,
+        img: "https://www.webfx.com/wp-content/uploads/2021/10/generic-image-placeholder.png",
+        price: 8.99,
+        name: "test"
+    },
+    {
+        id: 9,
+        img: "https://www.webfx.com/wp-content/uploads/2021/10/generic-image-placeholder.png",
+        price: 8.99,
+        name: "test"
+    }
 ]

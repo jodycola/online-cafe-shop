@@ -1,11 +1,11 @@
 import React from 'react';
 import styled from 'styled-components';
-import { locations } from '../data'; 
+import { locationsItems } from '../data'; 
 import LocationItem from './LocationItem';
 
 const Location = () => {
 
-  const displayLocations = locations.map((location) => {
+  const displayLocations = locationsItems.map((location) => {
     return <LocationItem key={location.id} location={location}/>
   })
 
