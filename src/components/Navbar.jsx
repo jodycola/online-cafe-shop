@@ -56,7 +56,6 @@ const Container = styled.div`
     height: 60px;
     padding-bottom: 75px;
     border-bottom: 3px solid darkgray;
-    border-top: 3px solid darkgray;
 `;
 
 const Wrapper = styled.div`
