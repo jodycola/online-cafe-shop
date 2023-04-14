@@ -11,9 +11,14 @@ const Slider = () => {
     const slideDisplay = sliderItems.map((slide) => {
         return <SliderItem slide={slide}/>
     })
+
     
     const handleClick = (direction) => {
-        console.log(direction)
+        if(direction === "left"){
+            setSlideIndex(slideIndex > 0 ? slideIndex - 1 : sliderItems.length - 1);
+        } else {
+            setSlideIndex(slideIndex < sliderItems.length - 1 ? slideIndex + 1 : 0);
+        }
     }
 
   return (
@@ -21,7 +26,7 @@ const Slider = () => {
         <Arrow direction="left" onClick={() => handleClick("left")}>
             <FontAwesomeIcon icon={faArrowLeft} />
         </Arrow>
-        <Wrapper>
+        <Wrapper slideIndex={slideIndex}>
             {slideDisplay}
         </Wrapper>
         <Arrow direction="right" onClick={() => handleClick("right")}>
@@ -63,4 +68,5 @@ const Arrow = styled.div`
 const Wrapper = styled.div`
     height: 100%;
     display: flex;
+    transform: translate(${(props) => props.slideIndex * -100}vw)
 `
