@@ -8,11 +8,11 @@ import Product from './Product';
 const Home = () => {
   return (
     <div>
-        <Announcements/>
-        <Navbar/>
-        <Slider/>
-        <Location/>
-        <Product/>
+        <Announcements />
+        <Navbar />
+        <Slider />
+        <Location />
+        <Product />
     </div>
   )
 }
