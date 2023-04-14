@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 
-const SliderItem = (slide) => {
+const SliderItem = ({ slide }) =>{
   return (
     <Slide>
         <ImageContainer>

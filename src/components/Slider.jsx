@@ -9,9 +9,7 @@ const Slider = () => {
     const [slideIndex, setSlideIndex] = useState(0);
 
     const slideDisplay = sliderItems.map((slide) => {
-        return <SliderItem
-        slide={slide}
-        />
+        return <SliderItem slide={slide}/>
     })
     
     const handleClick = (direction) => {
