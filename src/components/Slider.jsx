@@ -9,9 +9,8 @@ const Slider = () => {
     const [slideIndex, setSlideIndex] = useState(0);
 
     const slideDisplay = sliderItems.map((slide) => {
-        return <SliderItem slide={slide}/>
+        return <SliderItem key={slide.id} slide={slide}/>
     })
-
     
     const handleClick = (direction) => {
         if(direction === "left"){
@@ -68,5 +67,6 @@ const Arrow = styled.div`
 const Wrapper = styled.div`
     height: 100%;
     display: flex;
+    transition: all 1s ease;
     transform: translate(${(props) => props.slideIndex * -100}vw)
 `

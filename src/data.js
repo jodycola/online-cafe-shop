@@ -12,3 +12,27 @@ export const sliderItems = [
         description: "Refreshing chilled beverages"
     }
 ]
+
+export const locations = [
+    {
+        id: 1,
+        img: "https://s.hdnux.com/photos/01/30/45/23/23221451/10/1200x0.jpg",
+        city: "San Francisco"
+    },
+    {
+        id: 2,
+        img: "https://i.natgeofe.com/k/5b396b5e-59e7-43a6-9448-708125549aa1/new-york-statue-of-liberty_2x1.jpg",
+        city: "New York"
+    },
+    {
+        id: 3,
+        img: "https://i.natgeofe.com/n/5de6e34a-d550-4358-b7ef-4d79a09c680e/aerial-beach-miami-florida_16x9.jpg",
+        city: "Miami"
+    },
+    {
+        id: 4,
+        img: "https://www.thoughtco.com/thmb/_ZNhs9lhwfoos1WoYBygoL03g6c=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/GettyImages-497322993-598b2ad403f4020010ae0a08.jpg",
+        city: "Washington D.C."
+    }
+
+]
