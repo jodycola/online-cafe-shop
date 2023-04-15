@@ -4,6 +4,8 @@ import Navbar from "./Navbar";
 import Slider from './Slider';
 import Location from './Location';
 import Product from './Product';
+import Contact from './Contact';
+import Footer from './Footer';
 
 const Home = () => {
   return (
@@ -13,6 +15,8 @@ const Home = () => {
         <Slider />
         <Location />
         <Product />
+        <Contact />
+        <Footer/>
     </div>
   )
 }
