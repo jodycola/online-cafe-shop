@@ -91,5 +91,23 @@ export const menuItems = [
         img: "https://www.webfx.com/wp-content/uploads/2021/10/generic-image-placeholder.png",
         price: 8.99,
         name: "test"
+    },
+    {
+        id: 10,
+        img: "https://www.webfx.com/wp-content/uploads/2021/10/generic-image-placeholder.png",
+        price: 8.99,
+        name: "test"
+    },
+    {
+        id: 11,
+        img: "https://www.webfx.com/wp-content/uploads/2021/10/generic-image-placeholder.png",
+        price: 8.99,
+        name: "test"
+    },
+    {
+        id: 12,
+        img: "https://www.webfx.com/wp-content/uploads/2021/10/generic-image-placeholder.png",
+        price: 8.99,
+        name: "test"
     }
 ]
