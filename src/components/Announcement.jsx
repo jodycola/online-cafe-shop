@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from "styled-components";
 
-const Announcements = () => {
+const Announcement = () => {
   return (
     <Container>
         15% OFF ALL ONLINE ORDERS!
@@ -9,7 +9,7 @@ const Announcements = () => {
   )
 }
 
-export default Announcements
+export default Announcement
 
 const Container = styled.div`
     height: 30px;

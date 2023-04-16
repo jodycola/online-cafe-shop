@@ -3,11 +3,11 @@ import styled from 'styled-components';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faPaperPlane } from '@fortawesome/free-solid-svg-icons';
 
-const Contact = () => {
+const Newsletter = () => {
   return (
     <Container>
-        <Title>Contact Us</Title>
-        <Description>Let use know how you feel</Description>
+        <Title>Newsletter</Title>
+        <Description>Stay up to date with our newsletter</Description>
         <InputContainer>
             <Input placeholder="Your Email"/>
             <Button>
@@ -18,7 +18,7 @@ const Contact = () => {
   )
 }
 
-export default Contact
+export default Newsletter
 
 const Container = styled.div`
     height: 60vh;

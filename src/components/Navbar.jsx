@@ -53,9 +53,12 @@ const Navbar = () => {
 export default Navbar
 
 const Container = styled.div`
+    position: sticky; top: 0;
     height: 60px;
     padding-bottom: 75px;
     border-bottom: 3px solid darkgray;
+    z-index: 1;
+    background-color: black;
 `;
 
 const Wrapper = styled.div`
@@ -72,10 +75,12 @@ const Left = styled.div`
 `;
 const Language = styled.div`
     cursor: pointer;
+    color: white;
 `;
 
 const Input = styled.input`
     border: none;
+    color: white;
     &:focus {
         outline: none !important;
         box-shadow: 0 0 10px lightgray;
@@ -83,6 +88,7 @@ const Input = styled.input`
 `;
 
 const Search = styled.div`
+    color: white;
     border: .5px solid lightgray;
     display: flex;
     align-items: center;
@@ -96,6 +102,7 @@ const Center = styled.div`
 `;
 
 const Logo = styled.div`
+    color: white;
     font-weight: bold;
     font-size: 36px;
 `
