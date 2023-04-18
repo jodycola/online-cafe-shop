@@ -1,14 +1,13 @@
-import React from 'react';
+import React, { useState } from 'react';
 import styled from 'styled-components';
 import Announcement from '../components/Announcement';
 import Navbar from '../components/Navbar';
 import Newsletter from '../components/Newsletter';
 import Footer from '../components/Footer';
-import { TbMilk } from 'react-icons/tb';
-import { CiWheat, CiCoffeeBean } from 'react-icons/ci';
-import { GiAlmond } from 'react-icons/gi';
+import { AiOutlinePlus, AiOutlineMinus } from 'react-icons/ai';
 
 const SingleProduct = () => {
+    const [amount, setAmount] = useState(0);
   return (
     <Container>
         <Announcement/>
@@ -24,36 +23,32 @@ const SingleProduct = () => {
                     <FilterContainer>
                         <Filter>
                             <FilterTitle>Size</FilterTitle>
-                            
-                            <FilterSize size="8 oz."></FilterSize>
-                            <FilterSize size="12 oz."></FilterSize>
-                            <FilterSize size="16 oz."></FilterSize>
-                            <FilterSize size="24 oz."></FilterSize>
+                            <FilterSize>
+                                <FilterSizeOption>S</FilterSizeOption>
+                                <FilterSizeOption>M</FilterSizeOption>
+                                <FilterSizeOption>L</FilterSizeOption>
+                                <FilterSizeOption>XL</FilterSizeOption>
+                            </FilterSize>
                         </Filter>
                         <Filter>
                             <FilterTitle>Dairy</FilterTitle>
                             <FilterDairy>
-                                <Circle>
-                                    <TbMilk/>
-                                </Circle>
-                            </FilterDairy>
-                            <FilterDairy>
-                                <Circle>
-                                    <GiAlmond/>
-                                </Circle>
-                            </FilterDairy>
-                            <FilterDairy>
-                                <Circle>
-                                    <CiWheat/>
-                                </Circle>
-                            </FilterDairy>
-                            <FilterDairy>
-                                <Circle>
-                                    <CiCoffeeBean/>
-                                </Circle>
+                                <FilterDairyOption>Whole Milk</FilterDairyOption>
+                                <FilterDairyOption>Skim Milk</FilterDairyOption>
+                                <FilterDairyOption>Almond Milk</FilterDairyOption>
+                                <FilterDairyOption>Oat Milk</FilterDairyOption>
+                                <FilterDairyOption>Soy Milk</FilterDairyOption>
                             </FilterDairy>
                         </Filter>
                     </FilterContainer>
+                    <Quantity>
+                        <Amount>
+                            <AiOutlineMinus style={{cursor: "pointer", marginTop: "10px"}}/>
+                                <State>{amount}</State>
+                            <AiOutlinePlus style={{cursor: "pointer", marginTop: "10px"}}/>
+                        </Amount>
+                        <Button> Add to cart </Button>
+                    </Quantity>
                 </InfoContainer>
             </Wrapper>
         <Newsletter/>
@@ -119,21 +114,53 @@ const FilterTitle = styled.span`
 `;
 
 const FilterSize = styled.select`
-    width: 20px;
-    height: 20px;
+    font-size: 20px;
+    font-weight: 200;
+    margin-left: 10px;
+    padding: 5px;
 `;
 
-const FilterDairy = styled.div`
-    font-size: 50px;
-    width: 20px;
-    height: 20px;
+const FilterSizeOption = styled.option``;
+
+const FilterDairy = styled.select`
+    font-size: 20px;
+    font-weight: 200;
+    margin-left: 10px;
+    padding: 5px;
 `;
-    
-const Circle = styled.div`
-    border-radius: 50%;
-    width: 20px;
-    height: 20px;
-`
 
+const FilterDairyOption = styled.option``;
 
+const Quantity = styled.div`
+    width: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+`;
+
+const Amount = styled.div`
+    display: flex;
+    align-tiems: center;
+    font-weight: 700;
+    font-size: 20px;
+`;
+
+const State = styled.span`
+    width: 40px;
+    height: 40px;
+    border-radius: 10px;
+    border: 2px solid gray;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0px 10px;
+`;
+
+const Button = styled.div`
+    padding: 15px;
+    border: 2px solid gray;
+    background-color: white;
+    cursor: pointer;
+    font-weight: 500;
+`;
 
