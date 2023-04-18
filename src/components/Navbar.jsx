@@ -58,7 +58,7 @@ const Container = styled.div`
     height: 60px;
     padding-bottom: 75px;
     border-bottom: 3px solid darkgray;
-    z-index: 1;
+    z-index: 10;
     background-color: black;
     ${mobile({ height: "50px" })}
 `;

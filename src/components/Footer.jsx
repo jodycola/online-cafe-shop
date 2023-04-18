@@ -2,6 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 import { AiFillLinkedin, AiFillGithub, AiFillPhone, AiFillMail } from 'react-icons/ai';
 import { FaMapMarkerAlt } from 'react-icons/fa';
+import { mobile } from '../responsive';
 
 const Footer = () => {
   return (
@@ -48,6 +49,7 @@ export default Footer
 
 const Container = styled.div`
     display: flex;
+    ${mobile({ flexDirection: "column" })}
 `;
 
 const Left = styled.div`
@@ -86,6 +88,7 @@ const SocialIcon = styled.div`
 const Center = styled.div`
     flex: 1;
     padding: 20px;
+    ${mobile({ display: "none" })}
 `;
 
 const Title = styled.h3`
@@ -108,6 +111,7 @@ const ListItem = styled.li`
 const Right = styled.div`
     flex: 1;
     padding: 20px;
+    ${mobile({ backgroundColor: "black", color: "white" })}
 `;
 
 const ContactItem = styled.div`

@@ -2,6 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faPaperPlane } from '@fortawesome/free-solid-svg-icons';
+import { mobile } from '../responsive';
 
 const Newsletter = () => {
   return (
@@ -38,6 +39,7 @@ const Description = styled.div`
     font-size: 24px;
     font-weight: 300;
     margin-bottom: 20px;
+    ${mobile({ textAlign: "center" })}
 `;
 
 const InputContainer = styled.div`
@@ -47,6 +49,7 @@ const InputContainer = styled.div`
     display: flex;
     justify-content: center;
     border: 1px solid lightgray;
+    ${mobile({ width: "75%" })}
 `;
 
 const Input = styled.input`
