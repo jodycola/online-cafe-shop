@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
+import { mobile } from '../responsive'
 
 const LocationItem = ({ location }) => {
   return (
@@ -30,6 +31,8 @@ const Image = styled.img`
     object-fit: cover;
     -webkit-filter: grayscale(100%); /* Safari 6.0 - 9.0 */
     filter: grayscale(100%);
+    ${mobile({ height: "30vh" })}
+
 `;
 
 const ImageContainer = styled.div`

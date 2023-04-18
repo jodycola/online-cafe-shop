@@ -4,6 +4,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faArrowLeft, faArrowRight } from '@fortawesome/free-solid-svg-icons';
 import SliderItem from './SliderItem';
 import { sliderItems } from '../data';
+import { mobile } from '../responsive';
 
 const Slider = () => {
     const [slideIndex, setSlideIndex] = useState(0);
@@ -43,6 +44,7 @@ const Container = styled.div`
     display: flex;
     position: relative;
     overflow: hidden;
+    ${mobile({ display: "none" })}
 `
 
 const Arrow = styled.div`
