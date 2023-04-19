@@ -4,6 +4,7 @@ import Announcement from '../components/Announcement';
 import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
 import { AiOutlineMinus, AiOutlinePlus } from 'react-icons/ai';
+import { mobile } from '../responsive';
 
 const ShoppingCart = () => {
   return (
@@ -62,6 +63,7 @@ const Container = styled.div``;
 
 const Wrapper = styled.div`
   padding: 20px;
+  ${mobile({ padding: "10px" })}
 `;
 
 const Title = styled.div`
@@ -83,7 +85,9 @@ const TopButton = styled.button`
   border: 
 `;
 
-const TopTexts = styled.div``;
+const TopTexts = styled.div`
+  ${mobile({ display: "none" })}
+`;
 
 const TopText = styled.div`
   text-decoration: underline;
@@ -93,6 +97,7 @@ const TopText = styled.div`
 const Bottom = styled.div`
   display: flex;
   justify-content: space-between;
+  ${mobile({ flexDirection: "column" })}
 `;
 
 const Info = styled.div`
@@ -102,6 +107,7 @@ const Info = styled.div`
 const Product = styled.div`
   display: flex;
   justify-content: space-between;
+  ${mobile({ flexDirection: "column" })}
 `;
 
 const ProductDetail = styled.div`
@@ -140,11 +146,13 @@ const ProductAmountContainer = styled.div`
 const ProductAmount = styled.div`
   font-size: 24px;
   margin: 5px;
+  ${mobile({ margin: "5px 20px" })}
 `;
 
 const ProductPrice = styled.div`
   font-size: 30px;
   font-weight: 200;
+  ${mobile({ marginBottom: "20px" })}
 `;
 
 const Summary = styled.div`
