@@ -29,10 +29,7 @@ const Image = styled.img`
     width: 100%;
     height: 100%;
     object-fit: cover;
-    -webkit-filter: grayscale(100%); /* Safari 6.0 - 9.0 */
-    filter: grayscale(100%);
     ${mobile({ height: "30vh" })}
-
 `;
 
 const ImageContainer = styled.div`
@@ -49,10 +46,12 @@ const InfoContainer = styled.div`
     align-items: center;
     justifty-content: center
 `;
+
 const Title = styled.h1`
     color: white;
     margin-bottom: 20px;
 `;
+
 const Button = styled.button`
     cursor: pointer;
 `;
