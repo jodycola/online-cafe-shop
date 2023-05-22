@@ -2,21 +2,22 @@ import React from 'react';
 import styled from 'styled-components';
 import { mobile } from '../responsive'
 
-const LocationItem = ({ location }) => {
+const CategoryItem = ({ category }) => {
+    console.log(category)
   return (
     <Container>
         <ImageContainer>
-            <Image src={location.img}/>
+            <Image src={category.img}/>
         </ImageContainer>
         <InfoContainer>
-            <Title>{location.city}</Title>
+            <Title>{category.title}</Title>
             <Button className="bg-light-subtle border border-0 p-1 fw-bold">SHOP NOW</Button>
         </InfoContainer>
     </Container>
   )
 }
 
-export default LocationItem
+export default CategoryItem
 
 const Container = styled.div`
     flex: 1;
@@ -27,7 +28,7 @@ const Container = styled.div`
 
 const Image = styled.img`
     width: 100%;
-    height: 100%;
+    height: 400px;
     object-fit: cover;
     ${mobile({ height: "30vh" })}
 `;

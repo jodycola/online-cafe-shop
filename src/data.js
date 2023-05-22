@@ -13,28 +13,22 @@ export const sliderItems = [
     }
 ]
 
-export const locationsItems = [
+export const categoryItems = [
     {
         id: 1,
-        img: "https://s.hdnux.com/photos/01/30/45/23/23221451/10/1200x0.jpg",
-        city: "San Francisco"
+        img: "https://www.fusioncraftiness.com/wp-content/uploads/2016/07/IMG_4654-e1477674624451.jpg",
+        title: "Cold Beverages"
     },
     {
         id: 2,
-        img: "https://i.natgeofe.com/k/5b396b5e-59e7-43a6-9448-708125549aa1/new-york-statue-of-liberty_2x1.jpg",
-        city: "New York"
+        img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRZ_B6q-vuTACZT-SMUW3ErejTtHcir9ChDy9QhMe9lwc66fxCR72gxE8eARQkJm1GodXM&usqp=CAU",
+        title: "Hot Beverages"
     },
     {
         id: 3,
-        img: "https://i.natgeofe.com/n/5de6e34a-d550-4358-b7ef-4d79a09c680e/aerial-beach-miami-florida_16x9.jpg",
-        city: "Miami"
-    },
-    {
-        id: 4,
-        img: "https://www.thoughtco.com/thmb/_ZNhs9lhwfoos1WoYBygoL03g6c=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/GettyImages-497322993-598b2ad403f4020010ae0a08.jpg",
-        city: "Washington D.C."
+        img: "https://therecipecritic.com/wp-content/uploads/2021/04/strawberrysmoothie.jpg",
+        title: "Smoothies"
     }
-
 ]
 
 export const menuItems = [

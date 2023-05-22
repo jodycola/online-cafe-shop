@@ -1,23 +1,23 @@
 import React from 'react';
 import styled from 'styled-components';
-import { locationsItems } from '../data'; 
-import LocationItem from './LocationItem';
+import { categoryItems } from '../data'; 
+import CategoryItem from './CategoryItem';
 import { mobile } from '../responsive';
 
-const Location = () => {
+const Category = () => {
 
-  const displayLocations = locationsItems.map((location) => {
-    return <LocationItem key={location.id} location={location}/>
+  const displayCategories = categoryItems.map((category) => {
+    return <CategoryItem key={category.id} category={category}/>
   })
 
   return (
     <Container>
-      {displayLocations}
+      {displayCategories}
     </Container>
   )
 }
 
-export default Location
+export default Category
 
 const Container = styled.div`
   display: flex;
