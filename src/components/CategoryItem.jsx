@@ -1,18 +1,20 @@
 import React from 'react';
 import styled from 'styled-components';
 import { mobile } from '../responsive'
+import { Link } from "react-router-dom";
 
-const CategoryItem = ({ category }) => {
-    console.log(category)
+const CategoryItem = ({ item }) => {
   return (
     <Container>
+        <Link to={`/products/${item.category}`}>
         <ImageContainer>
-            <Image src={category.img}/>
+            <Image src={item.img}/>
         </ImageContainer>
         <InfoContainer>
-            <Title>{category.title}</Title>
+            <Title>{item.title}</Title>
             <Button className="bg-light-subtle border border-0 p-1 fw-bold">SHOP NOW</Button>
         </InfoContainer>
+        </Link>
     </Container>
   )
 }

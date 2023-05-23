@@ -1,4 +1,5 @@
-import React from 'react';
+import React, { useState } from 'react';
+import { useLocation } from 'react-router-dom'
 import styled from 'styled-components';
 import Navbar from '../components/Navbar';
 import Announcement from '../components/Announcement';
@@ -8,6 +9,17 @@ import Footer from '../components/Footer';
 import { mobile } from '../responsive';
 
 const ProductList = () => {
+    const location = useLocation();
+    const category = location.pathname.split("/")[2];
+
+    const [filter, setFilter] = useState("");
+    const [sort, setSort] = useState("");
+
+
+    const handleFilter = (e) => {
+        setFilter( e.target.value);
+    };
+
   return (
     <Container>
         <Announcement/>
@@ -16,24 +28,29 @@ const ProductList = () => {
         <FilterContainer>
             <Filter>
                 <FilterText>Filter Products</FilterText>
-                <Select>
-                    <Option disabled select>
-                        Temperature
+                <Select name="types" onChange={handleFilter}>
+                    <Option disabled>
+                        Types
                     </Option>
-                    <Option>Hot</Option>
-                    <Option>Iced</Option>
+                    <Option>hot</Option>
+                    <Option>cold</Option>
+                    <Option>smoothie</Option>
                 </Select>
             </Filter>
             <Filter>
                 <FilterText>Sort Products</FilterText>
-                <Select>
-                    <Option selected>Rating</Option>
-                    <Option>Price (asc)</Option>
-                    <Option>Price (desc)</Option>
+                <Select onChange={(e) => setSort(e.target.value)}>
+                    <Option value="rating">Rating</Option>
+                    <Option value="asc">Price (asc)</Option>
+                    <Option value="desc">Price (desc)</Option>
                 </Select>
             </Filter>
         </FilterContainer>
-        <Product/>
+        <Product 
+            category={category}
+            filter={filter}
+            sort={sort}
+        />
         <Newsletter/>
         <Footer/>
     </Container>

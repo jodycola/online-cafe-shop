@@ -6,8 +6,8 @@ import { mobile } from '../responsive';
 
 const Category = () => {
 
-  const displayCategories = categoryItems.map((category) => {
-    return <CategoryItem key={category.id} category={category}/>
+  const displayCategories = categoryItems.map((item) => {
+    return <CategoryItem key={item.id} item={item}/>
   })
 
   return (

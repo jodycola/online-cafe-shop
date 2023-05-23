@@ -17,17 +17,22 @@ export const categoryItems = [
     {
         id: 1,
         img: "https://www.fusioncraftiness.com/wp-content/uploads/2016/07/IMG_4654-e1477674624451.jpg",
-        title: "Cold Beverages"
+        title: "Cold Beverages",
+        category: "cold"
     },
     {
         id: 2,
         img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRZ_B6q-vuTACZT-SMUW3ErejTtHcir9ChDy9QhMe9lwc66fxCR72gxE8eARQkJm1GodXM&usqp=CAU",
-        title: "Hot Beverages"
+        title: "Hot Beverages",
+        category: "hot"
+
     },
     {
         id: 3,
         img: "https://therecipecritic.com/wp-content/uploads/2021/04/strawberrysmoothie.jpg",
-        title: "Smoothies"
+        title: "Smoothies",
+        category: "smoothie"
+
     }
 ]
 

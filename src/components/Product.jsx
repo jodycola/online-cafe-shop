@@ -3,7 +3,7 @@ import styled from 'styled-components';
 import { menuItems } from '../data';
 import ProductItem from './ProductItem';
 
-const Product = () => {
+const Product = ({ category, filter, sort }) => {
 
     const displayMenu = menuItems.map((product) => {
         return <ProductItem key={product.id} product={product}/>
